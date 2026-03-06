@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class checkNumber {
     public static void isPositive(int a){
         if(a>=0) {
@@ -23,9 +25,13 @@ public class checkNumber {
     }
 
     public static void main(String[] args){
-        isPositive(10);
-        isPositive(-5);
-        isEven(4);
-        isEven(9);
+        Scanner obj = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int a = obj.nextInt();
+        isPositive(a);
+        isEven(a);
+
+        obj.close();
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ballVloume {
     public static double volumeOfBall(int r){
         double PIE=3.14;
@@ -5,8 +7,14 @@ public class ballVloume {
     }
 
     public static void main (String[] args){
-        double ans= volumeOfBall(5);
+        Scanner obj = new Scanner(System.in);
 
-        System.out.println("Answer is "+ ans);
+        System.out.println("Enter the value of Radius: ");
+        int r= obj.nextInt();
+
+        double ans= volumeOfBall(r);
+        System.out.println("Volume of the ball is "+ ans);
+
+        obj.close();
     }
 }

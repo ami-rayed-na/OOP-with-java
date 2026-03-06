@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class circleArea {
     public static double areaOfCircle (int r){
         double PIE= 3.14;
@@ -5,6 +7,12 @@ public class circleArea {
     }
 
     public static void main (String[] args){
-        System.out.println("Answer is "+ areaOfCircle(5));
+        Scanner obj= new Scanner(System.in);
+
+        System.out.print("Enter the radius of circle: ");
+        int r= obj.nextInt();
+        System.out.println("Area of the circle is "+ areaOfCircle(r));
+
+        obj.close();
     }
 }

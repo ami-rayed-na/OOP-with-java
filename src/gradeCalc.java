@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class gradeCalc {
     public static String grade(int a){
-        if(a<40) return "F";
+        if(a>100 || a<0) return "Invalid Number";
+
+        else if(a<40) return "F";
 
         else if (a<60) return "C";
 
@@ -10,13 +14,15 @@ public class gradeCalc {
 
         else if(a<90) return "A";       
 
-        else if(a<=100) return "A+";            
-
-        else return "Invalid number";
+        else return "A+";
     }
 
     public static void main (String[] args){
-        
-        System.out.println("You got " + grade(39));
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your result: ");
+        int a= scan.nextInt();
+        System.out.println("You got " + grade(a));
+
+        scan.close();
     }
 }
