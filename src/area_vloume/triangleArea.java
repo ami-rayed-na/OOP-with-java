@@ -1,3 +1,5 @@
+package area_vloume;
+
 public class triangleArea{
     public static double areaOfTriangle(int b, int h) {
         return 0.5 * b *h;
