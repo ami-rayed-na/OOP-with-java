@@ -5,21 +5,11 @@ public class exe {
         System.out.print("Last step of the series:");
         int limit= number.nextInt();
 
-        new SimpleSeries();
-
-        SimpleSeries.Odd.oddSeriesFor(limit);
-        System.out.println();
-        SimpleSeries.Odd.oddSeriesWhile(limit);
-        System.out.println();
-        SimpleSeries.Odd.oddSeriesDoWhile(limit);
-        System.out.println();
-
-        SimpleSeries.Even.evenSeriesFor(limit);
-        System.out.println();
-        SimpleSeries.Even.evenSeriesWhile(limit);
-        System.out.println();
-        SimpleSeries.Even.evenSeriesDoWhile(limit);
+        SeriesSum obj = new SeriesSum();
         
+       // int res= oddSeries(limit);
+        System.out.println("Sum of the odd series is: " + obj.oddSeries(limit) );
+        System.out.println("Sum of the even series is: " + obj.evenSeries(limit) );        
         number.close();        
     }
     
