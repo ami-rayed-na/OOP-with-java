@@ -1,18 +1,22 @@
 import java.util.Scanner;
 public class exe {
     public static void main(String[] args){
-        Scanner number = new Scanner(System.in);
-        System.out.println("Did you complete your semester?");
-        System.out.println("Enter 1 for YES, 2 for NO.");
-        int sayIt = number.nextInt();
-        boolean complete_sem = (sayIt==1);
-        System.out.print("Enter your CGPA:");
-        double cg= number.nextDouble();
+        Scanner details = new Scanner(System.in);
+        System.out.print("Enter Target amount:");
+        int target= details.nextInt();
+        System.out.print("Enter total working day(s):");
+        int working_days= details.nextInt();
+        System.out.print("Enter Bonus amount:");
+        int bonus= details.nextInt();
+        System.out.print("Enter total sales:");
+        double achieve_target= details.nextDouble();
+        System.out.print("Enter attendence:");
+        int attendence= details.nextInt();
+        
+        Bonus obj= new Bonus();
+        obj.giveHim(target,working_days,bonus,achieve_target,attendence);
 
-       // Medel obj = new Medel();
-        Medel.throwMedelInHisFace(complete_sem,cg);
-
-        number.close();        
+        details.close();        
     }
     
 }
