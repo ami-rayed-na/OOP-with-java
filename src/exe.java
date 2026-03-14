@@ -1,13 +1,23 @@
 import java.util.Scanner;
 public class exe {
     public static void main(String[] args){
-        Scanner value = new Scanner(System.in);
+        Scanner num= new Scanner(System.in);
         
-        System.out.print("Enter Steps:");
-        int steps= value.nextInt();
+        System.out.println("How many numbers you want to average?");
+        int n= num.nextInt();
 
-        FiboSeries.printFibo(steps);
-        value.close();        
+        double[] arr= new double[n];
+        System.out.println("Enter number serially:");
+
+        for(int i=0; i<n; i++){
+            arr[i]= num.nextDouble();
+        }
+
+        Avg obj =new Avg();
+        //obj.avgUsingArray(arr,n);
+        System.out.println("Average is: "+ obj.avgUsingArray(arr,n));
+        
+        num.close();
     }
     
 }
