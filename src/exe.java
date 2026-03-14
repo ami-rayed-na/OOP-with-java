@@ -3,7 +3,7 @@ public class exe {
     public static void main(String[] args){
         Scanner num= new Scanner(System.in);
         
-        System.out.println("How many numbers you want to average?");
+        System.out.println("How many numbers are in series?");
         int n= num.nextInt();
 
         double[] arr= new double[n];
@@ -13,9 +13,9 @@ public class exe {
             arr[i]= num.nextDouble();
         }
 
-        Avg obj =new Avg();
+        //Avg obj =new Avg();
         //obj.avgUsingArray(arr,n);
-        System.out.println("Average is: "+ obj.avgUsingArray(arr,n));
+        System.out.println("Greatest number is: "+ FindMax.whoIsMax(arr,n));
         
         num.close();
     }
