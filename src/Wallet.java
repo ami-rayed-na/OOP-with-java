@@ -1,8 +1,7 @@
 public class Wallet {
-    static double balance1=200,balance2=200;
+    private double balance1=200,balance2=200;
 
     public void deposit(double balance, double amount){
-        //this.balance=balance1;
         System.out.println("You have deposited "+amount+" and your current balance is: "+(balance+amount));
     }
     
