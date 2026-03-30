@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class exe {
     public static void main(String[] args){
     Scanner ptr = new Scanner(System.in); 
-    Wallet4 obj1 = new Wallet4(500); 
+    Wallet5 obj1 = new Wallet5(500); 
     
     System.out.print("Enter the amount you want to deposit :");
     double amount= ptr.nextDouble();
@@ -12,7 +12,7 @@ public class exe {
     double w_amount= ptr.nextDouble();
     obj1.withdraw(w_amount);
 
-    Wallet4 obj2 = new Wallet4(300); 
+    Wallet5 obj2 = new Wallet5(300); 
     
     System.out.print("Enter the amount you want to deposit :");
     double amount1= ptr.nextDouble();
@@ -24,6 +24,8 @@ public class exe {
     String method= ptr.next();
     obj2.withdraw(w_amount1,method);
 
+    Wallet5.addBonus(w_amount1, obj2);
+    Wallet5.addBonus(w_amount, obj1);
     obj1.printInfo();
     obj2.printInfo();
 
